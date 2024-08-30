@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Exotic Coinage",
+    "version": "1.0",
+    "description": "Calculate and store the total value of your coins.",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "32": "icon32.png"
+      }
+    }
+  }
